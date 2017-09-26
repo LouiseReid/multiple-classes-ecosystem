@@ -20,11 +20,6 @@ class Bear
     @stomach << fish
   end
 
-  def lose_when_bear_takes()
-    if river.include?(fish)
-      @stomach << fish
-    end
-  end
 
   def can_roar()
     @noise
