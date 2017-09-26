@@ -25,7 +25,7 @@ class RiverTest < MiniTest::Test
   end
 
   def test_remove_fish
-    @river.remove_fish(@trout)
+    @river.remove_fish()
     assert_equal(0, @river.fish_count)
   end
 
@@ -34,11 +34,6 @@ class RiverTest < MiniTest::Test
     assert_equal(3, @river.fish_count())
   end
 
-  def test_lose_when_bear_takes()
-    @river.lose_when_bear_takes(@trout)
-    assert_equal(0, @river.fish_count())
-    assert_equal(1, @bear.stomach_size())
-  end
 
   def test_river_fish_count()
     assert_equal(3, @river.population())
